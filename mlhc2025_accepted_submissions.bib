@@ -1,0 +1,441 @@
+@Proceedings{MLHC-2025,
+booktitle = {Proceedings of the 10th Machine Learning for Healthcare Conference},
+volume = {298},
+editor = {Agrawal, Monica and Deshpande, Kaivalya and Engelhard, Matthew and Joshi, Shalmali and Tang, Shengpu and Urteaga, I\~nigo},
+name = {Machine Learning for Healthcare Conference},
+shortname = {MLHC},
+conference_number = {10},
+year = {2025},
+start = {2025-08-15},
+end = {2025-08-16},
+published = {2025-09-15},
+url = {http://mlforhc.org/},
+address={Mayo Clinic, Rochester, MN, USA}
+}
+
+
+@inproceedings{mlhc2025_207,
+title={{ADHAM}: Additive Deep Hazard Analysis Mixtures for Interpretable Survival Regression},
+author={Mert Ketenci and Vincent Jeanselme and Harry Reyes Nieva and Shalmali Joshi and No\'emie Elhadad},
+abstract={Survival analysis is a fundamental tool for modeling time-to-event outcomes in healthcare. Recent advances have introduced flexible neural network approaches for improved predictive performances. However, these models do not provide interpretable insights into the association between exposures and the modeled outcomes, a critical requirement for decision-making in clinical practice. To address this limitation, we propose Additive Deep Hazard Analysis Mixtures (ADHAM), an interpretable additive survival model. ADHAM assumes a conditional latent subpopulation structure that characterizes an individual, combined with covariate-specific hazard functions. To select the number of subpopulations, we introduce a post-training group refinement-based model-selection procedure; \ie an efficient approach to merge similar clusters to reduce the number of repetitive latent subpopulations identified by the model. We perform comprehensive studies to demonstrate ADHAM's interpretability on population, subpopulation, and individual levels. Extensive experiments on real-world datasets show that ADHAM provides novel insights into the association between exposures and outcomes. Further, ADHAM remains on par with existing state-of-the-art survival baselines, offering a scalable and interpretable approach to time-to-event prediction in healthcare.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=be2GT1dfvq}
+}
+
+
+@inproceedings{mlhc2025_204,
+title={Switching State Space Modeling via Constrained Inference for Clinical Outcome Prediction},
+author={Arnold Su and Anna Wong and Fareed Sheriff and Ardavan Saeedi and Li-wei H. Lehman},
+abstract={In clinical settings, timely and accurate prediction of adverse patient outcomes can help guide treatment decisions. While deep learning models such as LSTMs have demonstrated strong predictive performance on multivariate clinical time series, they often lack interpretability. To address this gap, we propose a framework that combines the predictive strength of neural networks with the interpretability of latent variable models. Specifically, we develop a constrained inference approach to train a switching state space model---an autoregressive hidden Markov model (AR-HMM)---for outcome prediction. Our method leverages knowledge distillation: a high-capacity LSTM "teacher" model is first trained to predict a target clinical outcome of interest, and its predictive behavior is then transferred to an interpretable AR-HMM "student" model through a similarity constraint during inference. We implement a constrained variational inference approach to estimate the parameters of the student model while aligning its latent representations with that of the teacher model's. We evaluated our approach using two real-world clinical datasets. Our approach demonstrates predictive performance comparable to state-of-the-art deep learning models, while producing interpretable latent trajectories that reflect clinically meaningful patient states.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=uzlFvVGs8i}
+}
+
+@inproceedings{mlhc2025_201,
+title={Learning to Call: A Field Trial of a Collaborative Bandit Algorithm for Optimizing Call Timing in Mobile Maternal Health},
+author={Arpan Dasgupta and Mizhaan Prajit Maniyar and Awadhesh Srivastava and Sanat Kumar and Amrita Mahale and Aparna Hegde and Arun Suggala and Karthikeyan Shanmugam and Milind Tambe and Aparna Taneja},
+abstract={Mobile health (mHealth) programs utilize automated voice messages to deliver health information, particularly targeting underserved communities, demonstrating the effectiveness of using mobile technology to disseminate crucial health information to these populations, improving health outcomes through increased awareness and behavioral change. India's Kilkari program delivers vital maternal health information via weekly voice calls to millions of mothers. However, the current random call scheduling often results in missed calls and reduced message delivery. This study presents a field trial of a collaborative bandit algorithm designed to optimize call timing by learning individual mothers' preferred call times. We deployed the algorithm with ~6500 Kilkari participants as a pilot study, comparing its performance to the baseline random calling approach. Our results demonstrate a statistically significant improvement in call pickup rates with the bandit algorithm, indicating its potential to enhance message delivery and impact millions of mothers across India. This research highlights the efficacy of personalized scheduling in mobile health interventions and underscores the potential of machine learning to improve maternal health outreach at scale.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=DYpFUCO1pH}
+}
+
+@inproceedings{mlhc2025_197,
+title={MedArabiQ: Benchmarking Large Language Models on Arabic Medical Tasks},
+author={Mouath Abu Daoud and Chaimae Abouzahir and Leen Kharouf and Walid Al-Eisawi and Nizar Habash and Farah E. Shamout},
+abstract={Large Language Models (LLMs) have demonstrated significant promise for various applications in healthcare. However, their effectiveness in the Arabic medical domain remains unexplored due to the lack of high-quality domain-specific datasets and benchmarks. This study introduces MedArabiQ, a new benchmark dataset consisting of seven Arabic medical tasks, covering multiple specialties and including multiple choice questions, fill-in-the-blank, and patient-doctor question answering. We first constructed the dataset using past medical exams and publicly available datasets. We then introduced different modifications to evaluate various LLM capabilities, including bias mitigation.
+We conducted an extensive evaluation with seven state-of-the-art open-source and proprietary LLMs, including GPT-4o, Claude 3.5-Sonnet, and Gemini 1.5. Our findings highlight the need for the creation of new high-quality benchmarks that span different languages to ensure fair deployment and scalability of LLMs in healthcare. By establishing this benchmark and releasing the dataset, we provide a foundation for future research aimed at evaluating and enhancing the multilingual capabilities of LLMs for the equitable use of generative AI in healthcare.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=zljZJwdtsr}
+}
+
+@inproceedings{mlhc2025_194,
+title={Balancing Interpretability and Flexibility in Modeling Diagnostic Trajectories with an Embedded Neural Hawkes Process Model},
+author={Yuankang Zhao and Matthew M. Engelhard},
+abstract={The Hawkes process (HP) is commonly used to model event sequences with self-reinforcing dynamics, including electronic health records (EHRs). Traditional HPs capture self-reinforcement via parametric impact functions that can be inspected to understand how each event modulates the intensity of others. Neural network-based HPs offer greater flexibility, resulting in improved fit and prediction performance, but at the cost of interpretability, which is often critical in healthcare. In this work, we aim to understand and improve upon this tradeoff. We propose a novel HP formulation in which impact functions are modeled by defining a flexible impact kernel, instantiated as a neural network, in event embedding space, which allows us to model large-scale event sequences with many event types. This approach is more flexible than traditional HPs yet more interpretable than other neural network approaches, and allows us to explicitly trade flexibility for interpretability by adding transformer encoder layers to further contextualize the event embeddings. Results show that our method accurately recovers impact functions in simulations, achieves competitive performance on MIMIC-IV procedure dataset, and gains clinically meaningful interpretation on XX-EHR with children diagnosis dataset even without transformer layers. This suggests that our flexible impact kernel is often sufficient to capture self-reinforcing dynamics in EHRs and other data effectively, implying that interpretability can be maintained without loss of performance.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=Wl0prgtM0T}
+}
+
+@inproceedings{mlhc2025_191,
+title={Improving {ARDS} Diagnosis Through Context-Aware Concept Bottleneck Models},
+author={Anish Narain and Ritam Majumdar and Nikita Narayanan and Dominic C Marshall and Sonali Parbhoo},
+abstract={The digitization of medical data has opened the door for AI to improve healthcare delivery, but the opaque nature of AI technologies presents challenges for interpretability, which is crucial in clinical settings. Previous work has attempted to explain predictions using Concept Bottleneck Models (CBMs), which learn interpretable concepts or feature groupings that map to higher-level clinical ideas, such as disease severity, facilitating human evaluation. However, these models often experience performance limitations when the concepts fail to adequately explain or characterize the task. In our study, we demonstrate the importance of incorporating contextual information from clinical notes to improve CBM performance, particularly in characterizing Acute Respiratory Distress Syndrome (ARDS), using data from MIMIC-IV. Our approach leverages a Large Language Model (LLM) to process clinical notes and generate additional concepts, boosting accuracy by up to 10\% compared to existing methods. This method also enables learning more comprehensive concepts, reducing the risk of information leakage and reliance on spurious shortcuts, thus improving the characterization of ARDS.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=zvqbrQNrII}
+}
+
+@inproceedings{mlhc2025_189,
+title={Bidirectional Hierarchical Protein Multi-Modal Representation Learning},
+author={Xuefeng Liu and Songhao Jiang and Chih-chan Tien and Jinbo Xu and Rick L. Stevens},
+abstract={Protein representation learning is critical for numerous biological tasks. Recently, large transformer-based protein language models (pLMs) pretrained on large scale protein sequences have demonstrated significant success in sequence-based tasks. However, pLMs lack structural context, and adapting them to structure-dependent tasks like binding affinity prediction remains a challenge. Conversely, graph neural networks (GNNs) designed to leverage 3D structural information have shown promising generalization in protein-related prediction tasks, but their effectiveness is often constrained by the scarcity of labeled structural data. Recognizing that sequence and structural representations are complementary perspectives of the same protein entity, we propose a multimodal bidirectional hierarchical fusion framework to effectively merge these modalities. Our framework employs attention and gating mechanisms to enable effective interaction between pLMs-generated sequential representations and GNN-extracted structural features, improving information exchange and enhancement across layers of the neural network. This bidirectional and hierarchical (Bi-Hierarchical) fusion approach leverages the strengths of both modalities to capture richer and more comprehensive protein representations. Based on the framework, we further introduce local Bi-Hierarchical Fusion with gating and global Bi-Hierarchical Fusion with multihead self-attention approaches. Through extensive experiments on a diverse set of protein-related tasks, our method demonstrates consistent improvements over strong baselines and existing fusion techniques in a variety of protein representation learning benchmarks, including react (enzyme/EC classification), model quality assessment (MQA), protein-ligand binding affinity prediction (LBA), protein-protein binding site prediction (PPBS), and B cell epitopes prediction (BCEs). Our method establishes a new state-of-the-art for multimodal protein representation learning, emphasizing the efficacy of Bi-Hierarchical Fusion in bridging sequence and structural modalities.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=vnTFLI1DB4}
+}
+
+@inproceedings{mlhc2025_188,
+title={Scaffold{GPT}: A Scaffold-based {GPT} Model for Drug Optimization},
+author={Xuefeng Liu and Songhao Jiang and Ian Foster and Jinbo Xu and Rick L. Stevens},
+abstract={Drug optimization has become increasingly crucial in light of fast-mutating virus strains and drug-resistant cancer cells. Nevertheless, it remains challenging as it necessitates retaining the beneficial properties of the original drug while simultaneously enhancing desired attributes beyond its scope. In this work, we aim to tackle this challenge by introducing ScaffoldGPT, a novel Generative Pretrained Transformer (GPT) designed for drug optimization based on molecular scaffolds. Our work comprises three key components: (1) A three-stage drug optimization approach that integrates pretraining, finetuning, and decoding optimization. (2) A uniquely designed two-phase incremental training approach for pre-training the drug optimization GPT on molecule scaffold with enhanced performance. (3) A token-level decoding optimization strategy, Top-N, that enabling controlled, reward guided generation using pretrained/finetuned GPT. We demonstrate via a comprehensive evaluation on COVID and cancer benchmarks that ScaffoldGPT outperforms the competing baselines in drug optimization benchmarks, while excelling in preserving original functional scaffold and enhancing desired properties.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=xlxWbw6TVi}
+}
+
+@inproceedings{mlhc2025_182,
+title={Improving Out-of-distribution Human Activity Recognition via {IMU}-Video Cross-modal Representation Learning},
+author={Seyyed Saeid Cheshmi and Buyao Lyu and Thomas Lisko and Rajesh Rajamani and Robert A. McGovern and Yogatheesan Varatharajah},
+abstract={Human Activity Recognition (HAR) based on wearable inertial sensors plays a critical role in remote health monitoring. In patients with movement disorders, the ability to detect abnormal patient movements in their home environments can enable continuous optimization of treatments and help alert caretakers as needed. Machine learning approaches have been proposed for HAR tasks using Inertial Measurement Unit (IMU) data; however, most rely on application-specific labels and lack generalizability to data collected in different environments or populations. To address this limitation, we propose a new cross-modal self-supervised pretraining approach to learn representations from large-sale unlabeled IMU-video data and demonstrate improved generalizability in HAR tasks on out of distribution (OOD) IMU datasets, including a dataset collected from patients with Parkinson's disease. Specifically, our results indicate that the proposed cross-modal pretraining approach outperforms the current state-of-the-art IMU-video pretraining approach and IMU-only pretraining under zero-shot and few-shot evaluations. Broadly, our study provides evidence that in highly dynamic data modalities, such as IMU signals, cross-modal pretraining may be a useful tool to learn generalizable data representations.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=M5DIi2XS8l}
+}
+
+
+@inproceedings{mlhc2025_181,
+title={{LEAVES}: Learning Views for Time-Series Biobehavioral Data in Contrastive Learning},
+author={Han Yu and Huiyuan Yang and Akane Sano},
+abstract={Contrastive learning has been utilized as a promising self-supervised learning approach to extract meaningful representations from unlabeled data. The majority of these methods take advantage of data-augmentation techniques to create diverse views from the original input. However, optimizing augmentations and their parameters for generating more effective views in contrastive learning frameworks is often resource-intensive and time-consuming. While several strategies have been proposed for automatically generating new views in computer vision, research in other domains, such as time-series biobehavioral data, remains limited. In this paper, we introduce a simple yet powerful module for automatic view generation in contrastive learning frameworks applied to time-series biobehavioral data, which is essential for modern health care, termed **lea**rning **v**i**e**ws for time-**s**eries data (LEAVES). This proposed module employs adversarial training to learn augmentation hyperparameters within contrastive learning frameworks. We assess the efficacy of our method on multiple time-series datasets using two well-known contrastive learning frameworks, namely SimCLR and BYOL. Across four diverse biobehavioral datasets, LEAVES requires only ~20 learnable parameters---dramatically fewer than the ~580,000 parameters demanded by frameworks like ViewMaker, previously proposed adversarially trained convolutional module in contrastive learning, while achieving competitive and often superior performance to existing baseline methods. Crucially, these efficiency gains are obtained without extensive manual hyperparameter tuning, which makes LEAVES particularly suitable for large-scale or real-time healthcare applications that demand both accuracy and practicality.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=rbYLN3mgC1}
+}
+
+@inproceedings{mlhc2025_177,
+title={Does Domain-Specific Retrieval Augmented Generation Help {LLM}s Answer Consumer Health Questions?},
+author={Chase M Fensore and Rodrigo M Carrillo-Larco and Megha Shah and Joyce C. Ho},
+abstract={While large language models (LLMs) have shown impressive performance on medical benchmarks, there remains uncertainty about whether retrieval-augmented generation (RAG) meaningfully improves their ability to answer consumer health questions. In this study, we systematically evaluate vanilla LLMs against RAG-enhanced approaches using the NIDDK portion of the MedQuAD dataset. We compare four open-source LLMs in both vanilla and RAG configurations, assessing performance through automated metrics, LLM-based evaluation, and clinical validation. Surprisingly, we find that vanilla LLM approaches consistently outperform RAG variants across both quantitative metrics (BLEU, ROUGE, BERTScore) and qualitative assessments. The relatively low retrieval performance (Precision@5 = 0.15) highlights fundamental challenges in implementing effective RAG systems for medical question-answering, even with carefully curated questions. While RAG showed competitive performance in specific areas like scientific consensus and harm reduction, our findings suggest that successful implementation of RAG for consumer health question-answering requires more sophisticated approaches than simple retrieval and prompt engineering. These results contribute to the ongoing discussion about the role of retrieval augmentation in medical AI systems and highlight the need for medical-specific RAG infrastructure to enhance medical question-answering systems.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=J1KUHXdmZe}
+}
+
+@inproceedings{mlhc2025_166,
+title={Patient-Specific Deep Reinforcement Learning for Automatic Replanning in Head-and-Neck Cancer Proton Therapy},
+author={Malvern Madondo and Yuan Shao and Yingzi Liu and Jun Zhou and Xiaofeng Yang and Zhen Tian},
+abstract={Anatomical changes in head-and-neck cancer (HNC) patients during intensity-modulated proton therapy (IMPT) can shift the Bragg Peak of proton beams, risking tumor underdosing and organ-at-risk (OAR) overdosing. As a result, treatment replanning is often required to maintain clinically acceptable treatment quality. However, current manual replanning processes are often resource-intensive and time-consuming. In this work, we propose a patient-specific deep reinforcement learning (DRL) framework for automated IMPT replanning, with a reward-shaping mechanism based on a $150$-point plan quality score designed to handle the competing clinical objectives in radiotherapy planning. We formulate the planning process as an RL problem where agents learn high-dimensional control policies to adjust plan optimization priorities to maximize plan quality. Unlike population-based approaches, our framework trains personalized agents for each patient using their planning CT and augmented anatomies simulating anatomical changes (tumor progression and regression). This patient-specific approach leverages anatomical similarities along the treatment course, enabling effective plan adaptation. We implemented and compared two DRL algorithms, Deep Q-Network (DQN) and Proximal Policy Optimization (PPO), using dose-volume histograms (DVHs) as state representations and a $22$-dimensional action space of priority adjustments. Evaluation on five HNC patients using actual replanning CT data showed that both DRL agents improved initial plan scores from $120.63 \pm 21.40$ to $139.78 \pm 6.84$ (DQN) and $142.74 \pm 5.16$ (PPO), surpassing the replans manually generated by a human planner ($137.20 \pm 5.58$). Clinical validation confirms these improvements translate to better tumor coverage and OAR sparing across diverse anatomical changes. This work highlights the potential of DRL in addressing the geometric and dosimetric complexities of adaptive proton therapy, offering a promising solution for efficient offline adaptation and paving the way for online adaptive proton therapy.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=xkdeOumNpg}
+}
+
+
+@inproceedings{mlhc2025_154,
+title={Fact{EHR}: A Dataset for Evaluating Factuality in Clinical Notes Using {LLM}s},
+author={Monica Munnangi and Akshay Swaminathan and Jason Alan Fries and Jenelle A Jindal and Sanjana Narayanan and Ivan Lopez and Lucia Tu and Philip Chung and Jesutofunmi Omiye and Mehr Kashyap and Nigam Shah},
+abstract={Verifying and attributing factual claims is essential for the safe and effective use of large language models (LLMs) in healthcare. A core component of factuality evaluation is fact decomposition---the process of breaking down complex clinical statements into fine-grained, atomic facts for verification. Recent work has proposed fact decomposition, which uses LLMs to rewrite source text into concise sentences conveying a single piece of information, as an approach for fine-grained fact verification, in the general domain. However, clinical documentation poses unique challenges for fact decomposition due to dense terminology and diverse note types and remains understudied. To address this gap and to explore these challenges, we present FactEHR, an NLI dataset consisting of full document fact decompositions for 2,168 clinical notes spanning four types from three hospital systems resulting in 987,266 entailment pairs. We asses the generated facts on different axes, from entailment evaluation of LLMs to a qualitative analysis. Our evaluation, including review by clinicians, highlights significant variability in the performance of LLMs for fact decom- position from Gemini generating highly relevant and factually correct facts to Llama-3 generating fewer and inconsistent facts. The results underscore the need for better LLM capabilities to support factual verification in clinical text. To facilitate further research, we release anonymized code and plan to make the dataset available upon acceptance.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=nROJguYli7}
+}
+
+
+@inproceedings{mlhc2025_152,
+title={Optimizing Segmentation of Neonatal Brain {MRI}s with Partially Annotated Multi-Label Data},
+author={Dariia Kucheruk and Sam Osia and Pouria Mashouri and Elizaveta Rybnikova and Sergey Protserov and Jaryd Hunter and Maksym Muzychenko and Jessie Ting Guo and Michael Brudno},
+abstract={Accurate assessment of the developing brain is important for research and clinical applications, and manual segmentation of brain MRIs is a painstaking and expensive process. We introduce the first method for neonatal brain MRI segmentation that simultaneously leverages fully and partially labeled data within a multi-label segmentation framework. Our method improves accuracy and efficiency by utilizing all available supervision---even when only coarse or incomplete annotations are present---enabling the model to learn both detailed and high-level brain structures from heterogeneous data. We validate our method on scans from the Developing Human Connectome Project (dHCP) acquired at both preterm and term gestational ages. Our approach demonstrates more accurate and robust segmentation compared to standard supervised and semi-supervised models trained with equivalent data. The results showed an improvement in predictions of predominantly unannotated labels in the training set when combined with labels of relevant "super-classes". Further experiments with semi-supervised loss functions demonstrated that limited but reliable supervision is more effective than using noisy labels. Our work presents evidence that it is possible to build robust medical image segmentation models with only a small amount of fully labeled training data.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=ZOdRDhbjAL}
+}
+
+@inproceedings{mlhc2025_150,
+title={Borrowing From the Future: Enhancing Early Risk Assessment through Contrastive Learning},
+author={Minghui Sun and Matthew M. Engelhard and Benjamin Goldstein},
+abstract={Risk assessment in pediatric populations often requires analysis across multiple developmental stages. For example, clinicians may evaluate risks prenatally, at birth, and during WellChild visits. While predictions at later stages typically achieve higher accuracy, it is clinically desirable to make reliable risk assessments as early as possible. Therefore, this study focuses on enhancing prediction performance in early-stage risk assessments. Our solution, **Borrowing From the Future (BFF)**, is a contrastive multi-modal framework that treats each time window as a distinct modality. In BFF, a model is trained on all available data throughout the time while conduct risk assessment using the up-to-time information. This contrastive framework allows the model to "borrow" informative signals from later stages (e.g., WellChild visits) to implicitly supervise the learning at earlier stages (e.g., prenatal/birth stages). We validate BFF on two real-world pediatric outcome prediction tasks, demonstrating consistent improvements in early risk assessment.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=9zo9gv22hA}
+}
+
+@inproceedings{mlhc2025_147,
+title={Iterative Learning of Computable Phenotypes for Treatment Resistant Hypertension using Large Language Models},
+author={Guilherme Seidyo Imai Aldeia and Daniel S Herman and William La Cava},
+abstract={Large language models (LLMs) have demonstrated remarkable capabilities for medical question answering and programming, but their potential for generating interpretable computable phenotypes (CPs) is under-explored.  
+In this work, we investigate whether LLMs can generate accurate and concise CPs for six clinical phenotypes of varying complexity, which could be leveraged to enable scalable clinical decision support to improve care for patients with hypertension.
+In addition to evaluating zero-short performance, we propose and test a synthesize, execute, debug, instruct strategy that uses LLMs to generate and iteratively refine CPs using data-driven feedback.  
+Our results show that LLMs, coupled with iterative learning, can generate interpretable and reasonably accurate programs that approach the performance of state-of-the-art ML methods while requiring significantly fewer training examples.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=2QyldF99hc}
+}
+
+@inproceedings{mlhc2025_146,
+title={Detection of Pancreatic Cancer Using Multimodal Learning on Electronic Health Records},
+author={Mosbah Aouad and Anirudh Choudhary and Awais Farooq and Steven W Nevers and Lusine Demirkhanyan and Bhrandon Harris and Suguna Pappu and Christopher S Gondi and Ravi Iyer},
+abstract={Pancreatic ductal adenocarcinoma (PDAC) is one of the deadliest cancers, and early detection remains a major clinical challenge due to the absence of specific symptoms and reliable biomarkers. In this work, we propose a new multimodal approach that integrates longitudinal diagnosis code histories and routinely collected laboratory measurements from electronic health records to detect PDAC up to one year prior to clinical diagnosis. Our method combines Neural Controlled Differential Equations to model irregular lab time series, pretrained language models and recurrent networks to learn diagnosis code trajectory representations, and cross-attention mechanisms to capture interactions between the two modalities. We develop and evaluate our approach on a real-world dataset of nearly 4,700 patients and achieve significant improvements in AUC ranging from 6.5% to 15.5% over state-of-the-art methods. Furthermore, our model identifies diagnosis codes and laboratory panels associated with elevated PDAC risk, including both established and new biomarkers.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=fvvXT9pAYP}
+}
+
+@inproceedings{mlhc2025_145,
+title={The Impact of Image Resolution on Biomedical Multimodal Large Language Models},
+author={Liangyu Chen and James Burgess and Jeffrey J Nirschl and Orr Zohar and Serena Yeung-Levy},
+abstract={Imaging technologies are fundamental to biomedical research and modern medicine, requiring analysis of high-resolution images across various modalities. While multimodal large language models (MLLMs) show promise for biomedical image analysis, most are designed for low-resolution images from general-purpose datasets, risking critical information loss. We investigate how image resolution affects MLLM performance in biomedical applications and demonstrate that: (1) native-resolution training and inference significantly improve performance across multiple tasks, (2) misalignment between training and inference resolutions severely degrades performance, and (3) mixed-resolution training effectively mitigates misalignment and balances computational constraints with performance requirements. Based on these findings, we recommend prioritizing native-resolution inference and mixed-resolution datasets to optimize biomedical MLLMs for transformative impact in scientific research and clinical applications.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=nvulsfxz3p}
+}
+
+@inproceedings{mlhc2025_115,
+title={The Geometry of Queries: Query-Based Innovations in Retrieval-Augmented Generation for Healthcare {QA}},
+author={Eric Yang and Jonathan Amar and Jong Ha Lee and Bhawesh Kumar and Yugang Jia},
+abstract={Deploying Large Language Models (LLMs) for healthcare question answering requires robust methods to ensure accuracy and reliability. This work introduces Query-Based Retrieval Augmented Generation (QB-RAG), a framework for enhancing Retrieval-Augmented Generation (RAG) systems in healthcare question-answering by pre-aligning user queries with a database of curated, answerable questions derived from healthcare content. A key component of QB-RAG is an LLM-based filtering mechanism that ensures that only relevant and answerable questions are included in the database, enabling reliable reference query generation at scale. We establish a theoretical foundation for QB-RAG, provide a comparative analysis of existing retrieval enhancement techniques, and introduce a generalizable, comprehensive evaluation framework that assesses both the retrieval effectiveness and the quality of the generated response based on faithfulness, relevance, and adherence to the guideline. Our empirical evaluation on a healthcare data set demonstrates the superior performance of QB-RAG compared to existing retrieval methods, highlighting its practical value in building trustworthy digital health applications for health question-answering.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=t80KMZdVIq}
+}
+
+@inproceedings{mlhc2025_114,
+title={Can interpretability and accuracy coexist in cancer survival analysis?},
+author={Piyush Borole and Tongjie Wang and Antonio Vergari and Ajitha Rajan},
+abstract={Survival analysis refers to statistical procedures used to analyze data that focuses on the time until an event occurs, such as death in cancer patients. Traditionally, the linear Cox Proportional Hazards (CPH) model is widely used due to its inherent interpretability. CPH model help identify key disease-associated factors (through feature weights), providing insights into patient risk of death. However, their reliance on linear assumptions limits their ability to capture the complex, non-linear relationships present in real-world data. To overcome this, more advanced models, such as neural networks, have been introduced, offering significantly improved predictive accuracy. However, these gains come at the expense of interpretability, which is essential for clinical trust and practical application. To address the trade-off between predictive accuracy and interpretability in survival analysis, we propose ConSurv, a concept bottleneck model that maintains state-of-the-art performance while providing transparent and interpretable insights. Using gene expression and clinical data from breast cancer patients, ConSurv captures complex feature interactions and predicts patient risk. By offering clear, biologically meaningful explanations for each prediction, ConSurv attempts to build trust among clinicians and researchers in using the model for informed decision-making.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=e4BuFcGq57}
+}
+
+@inproceedings{mlhc2025_107,
+title={MedPatch: Confidence-Guided Multi-Stage Fusion for Multimodal Clinical Data},
+author={Baraa Al Jorf and Farah E. Shamout},
+abstract={Clinical decision-making relies on the integration of information across various data modalities, such as clinical time-series, medical images and textual reports. Compared to other domains, real-world medical data is heterogeneous in nature, limited in size, and sparse due to missing modalities. This significantly limits model performance in clinical prediction tasks. Inspired by clinical workflows, we introduce MedPatch, a multi-stage multimodal fusion architecture, which seamlessly integrates multiple modalities via confidence-guided patching. MedPatch comprises three main components: (i) a multi-stage fusion strategy that leverages joint and late fusion simultaneously, (ii) a missingness-aware module that handles sparse samples with missing modalities, (iii) a joint fusion module that clusters latent token patches based on calibrated unimodal token-level confidence. We evaluated MedPatch using real-world data consisting of clinical time-series data, chest X-ray images, radiology reports, and discharge notes extracted from the MIMIC-IV, MIMIC-CXR, and MIMIC-Notes datasets on two benchmark tasks, namely in-hospital mortality prediction and clinical condition classification. Compared to existing baselines, MedPatch achieves state-of-the-art performance. Our work highlights the effectiveness of confidence-guided multi-stage fusion in addressing the heterogeneity of multimodal data, and establishes new state-of-the-art benchmark results for clinical prediction tasks.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=QBWQPiaXvm}
+}
+
+@inproceedings{mlhc2025_106,
+title={Generating Accurate Synthetic Survival Data by Conditioning on Outcomes},
+author={Mohd Ashhad and Ricardo Henao},
+abstract={Synthetically generated data can improve privacy, fairness, and data accessibility; however, it can be challenging in specialized scenarios such as survival analysis. One key challenge in this setting is censoring, i.e., the timing of an event is unknown in some cases.
+Existing methods struggle to accurately reproduce the distributions of both observed and censored event times when generating synthetic data. We propose a conceptually simple approach that generates covariates conditioned on event times and censoring indicators by leveraging existing tabular data generation models without making assumptions about the mechanism underlying censoring.
+Experiments on real-world datasets demonstrate that our method consistently outperforms baselines and improves downstream survival model performance.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=r6PzrtS94S}
+}
+
+
+@inproceedings{mlhc2025_101,
+title={Clinicians' Voice: Fundamental Considerations for {XAI} in Healthcare},
+author={Tabea Elina R\"ober and Rob Goedhart and Ilker Birbil},
+abstract={Explainable AI (XAI) holds the promise of advancing the implementation and adoption of AI-based tools in practice, especially in high-stakes environments like healthcare. However, most of the current research lacks input from end users, and therefore their practical value is limited. To address this, we conducted semi-structured interviews with clinicians to discuss their thoughts, hopes, and concerns. Clinicians from our sample generally think positively about developing AI-based tools for clinical practice, but they have concerns about how these will fit into their workflow and how it will impact clinician-patient relations. We further identify training of clinicians on AI as a crucial factor for the success of AI in healthcare and highlight aspects clinicians are looking for in (X)AI-based tools. In contrast to other studies, we take on a holistic and exploratory perspective to identify general requirements for (X)AI products for healthcare before moving on to testing specific tools.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=65Pj5cw9fK}
+}
+
+
+@inproceedings{mlhc2025_100,
+title={Proto{ECGN}et: Case-Based Interpretable Deep Learning for Multi-Label {ECG} Classification with Contrastive Learning},
+author={Sahil Sethi and David Chen and Thomas Statchen and Michael C. Burkhart and Nipun Bhandari and Bashar Ramadan and Brett Beaulieu-Jones},
+abstract={Deep learning-based electrocardiogram (ECG) classification has shown impressive performance but clinical adoption has been slowed by the lack of transparent and faithful explanations. Post hoc methods such as saliency maps may fail to reflect a model's true decision process. Prototype-based reasoning offers a more transparent alternative by grounding decisions in similarity to learned representations of real ECG segments---enabling faithful, case-based explanations. We introduce ProtoECGNet, a prototype-based deep learning model for interpretable, multi-label ECG classification. ProtoECGNet employs a structured, multi-branch architecture that reflects clinical interpretation workflows: it integrates a 1D CNN with global prototypes for rhythm classification, a 2D CNN with time-localized prototypes for morphology-based reasoning, and a 2D CNN with global prototypes for diffuse abnormalities. Each branch is trained with a prototype loss designed for multi-label learning, combining clustering, separation, diversity, and a novel contrastive loss that encourages appropriate separation between prototypes of unrelated classes while allowing clustering for frequently co-occurring diagnoses. We evaluate ProtoECGNet on all 71 diagnostic labels from the PTB-XL dataset, demonstrating competitive performance relative to state-of-the-art black-box models while providing structured, case-based explanations. To assess prototype quality, we conduct a structured clinician review of the final model's projected prototypes, finding that they are rated as representative and clear. ProtoECGNet shows that prototype learning can be effectively scaled to complex, multi-label time-series classification, offering a practical path toward transparent and trustworthy deep learning models for clinical decision support.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=xP459JA6a4}
+}
+
+@inproceedings{mlhc2025_98,
+title={{FIVA}: Federated Inverse Variance Averaging for Universal {CT} Segmentation with Uncertainty Estimation},
+author={Asim Ukaye and Numan Saeed and Karthik Nandakumar},
+abstract={Different CT segmentation datasets are typically obtained from different scanners under different capture settings and often provide segmentation labels for a limited and often disjoint set of organs. 
+Using these heterogeneous data effectively while preserving patient privacy can be challenging. This work presents a novel federated learning approach to achieve universal segmentation across diverse abdominal CT datasets by utilizing model uncertainty for aggregation and predictive uncertainty for inference. 
+Our approach leverages the inherent noise in stochastic mini-batch gradient descent to estimate a distribution over the model weights to provide an on-the-go uncertainty over the model parameters at the client level. The parameters are then aggregated at the server using the additional uncertainty information using a Bayesian-inspired inverse-variance aggregation scheme. 
+Furthermore, the proposed method quantifies prediction uncertainty by propagating the uncertainty from the model weights, providing confidence measures essential for clinical decision-making. Consistent with recent work shown, predictive uncertainty is utilized in the inference stage to improve predictive performance.
+Experimental evaluations demonstrate the effectiveness of this approach in improving both the quality of federated aggregation and the uncertainty-weighted inference as compared to the previously established baselines.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=w3nEPWjxok}
+}
+
+@inproceedings{mlhc2025_97,
+title={Evaluation of Multi-Agent {LLM}s in Multidisciplinary Team Decision-Making for Challenging Cancer Cases},
+author={Jaesik Kim and Byounghan Lee and Kyung-Ah Sohn and Dokyoon Kim and Young Chan Lee},
+abstract={This study explores the potential of large language model (LLM) agents in real-world clinical decision-making, focusing on their alignment with human experts in cancer multidisciplinary team (MDT) meetings. While LLMs perform well on benchmark medical question-answering tasks, these evaluations often oversimplify the open-ended, multifaceted nature of actual clinical decisions. In practice, MDTs require balancing diverse expert opinions and multiple valid treatment options. Using real MDT meeting data, we compare different LLM approaches including single-agent and multi-agent systems to assess their ability to replicate consensus-based decisions. Our findings indicate that multi-agent, conversation-based systems, which assign specialized roles and facilitate dynamic inter-agent conversation, better approximate human expert decisions in our data. Overall, this work highlights the potential practical utility of LLM agents in complex clinical settings and lays the groundwork for their future integration as decision support tools in multidisciplinary medical contexts.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=fHgpqcY7C0}
+}
+
+
+@inproceedings{mlhc2025_90,
+title={Stepwise Fine and Gray: Subject-Specific Variable Selection Shows When Hemodynamic Data Improves Prognostication of Comatose Post-Cardiac Arrest Patients},
+author={Xiaobin Shen and Jonathan Elmer and George H. Chen},
+abstract={Prognostication for comatose post-cardiac arrest patients is a critical challenge that directly impacts clinical decision-making in the ICU. Clinical information that informs prognostication is collected serially over time. Shortly after cardiac arrest, various time-invariant baseline features are collected (e.g., demographics, cardiac arrest characteristics). After ICU admission, additional features are gathered, including time-varying hemodynamic data (e.g., blood pressure, doses of vasopressor medications). We view these as two phases in which we collect new features. In this study, we propose a novel stepwise dynamic competing risks model that improves the prediction of neurological outcomes by automatically determining when to take advantage of time-invariant features (first phase) and time-varying features (second phase). A key finding is that it is not always beneficial to use all features (first and second phase) for prediction. Notably, our model finds patients for whom this second phase (time-varying hemodynamic) information is beneficial for prognostication and also *when* this information is beneficial (as we collect more hemodynamic data for a patient over time, how important these data are for prognostication varies). Our approach extends the standard Fine and Gray model to explicitly model the two phases and to incorporate neural networks to flexibly capture complex nonlinear feature relationships. Evaluated on a retrospective cohort of 2,278 comatose post-arrest patients, our model demonstrates robust discriminative performance for the competing outcomes of awakening, withdrawal of life-sustaining therapy, and death despite maximal support. Subgroup analyses based on the motor component of the FOUR score reveal that patients with severe neurological dysfunction receive minimal additional prognostic benefit from hemodynamic data, whereas those with moderate-to-mild impairment derive significant incremental risk information. These findings underscore the potential of dynamic risk modeling for enhancing prognostication. Our approach generalizes to more than two phases in which new features are collected and could be used in other dynamic prediction tasks, where it may be helpful to know when and for whom newly collected features significantly improve prediction.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=hMVpb73ioV}
+}
+
+@inproceedings{mlhc2025_88,
+title={Rare Disease Differential Diagnosis with Large Language Models at Scale: From Abdominal Actinomycosis to Wilson's Disease},
+author={Elliot Schumacher and Dhruv Naik and Anitha Kannan},
+abstract={Large language models (LLMs) have demonstrated impressive capabilities in disease diagnosis. However, their effectiveness in identifying rarer diseases, which are inherently more challenging to diagnose, remains an open question. Rare disease performance is critical with the increasing use of LLMs in healthcare settings.  This is especially true if a primary care physician needs to make a rarer prognosis from only a patient conversation so that they can take the appropriate next step. To that end, several clinical decision support systems are designed to support providers in rare disease identification. Yet their utility is limited due to their lack of knowledge of common disorders and difficulty of use.  
+
+In this paper, we propose RareScale to combine the knowledge LLMs with expert systems.  We use jointly use an expert system and LLM to simulate rare disease chats.  This data is used to train a rare disease candidate predictor model.  Candidates from this smaller model are then used as additional inputs to black-box LLM to make the final differential diagnosis. Thus, RareScale allows for a balance between rare and common diagnoses.  We present results on over 575 rare diseases, beginning with Abdominal Actinomycosis and ending with Wilson's Disease.  Our approach significantly improves the baseline performance of black-box LLMs by over 17% in Top-5 accuracy. We also find that our candidate generation performance is high (e.g. 88.8% on gpt-4o generated chats).},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=rI2HzjtxXx}
+}
+
+
+@inproceedings{mlhc2025_79,
+title={Equitable Electronic Health Record Prediction with {FAME}: Fairness-Aware Multimodal Embedding},
+author={Nikkie Hooman and Zhongjie Wu and Eric C. Larson and Mehak Gupta},
+abstract={Electronic Health Record (EHR) data encompasses diverse modalities---text, images, and medical codes---that are vital for clinical decision-making. To process these complex data, multimodal AI (MAI) has emerged as a powerful approach for fusing such information. However, most existing MAI models optimize for better prediction performance, potentially reinforcing biases across patient subgroups. Although bias reduction techniques for multimodal models have been proposed, the individual strengths of each modality and their interplay in both reducing bias and optimizing performance remain underexplored. In this work, we introduce FAME (Fairness-Aware Multimodal Embeddings), a framework that explicitly weights each modality according to its fairness contribution. FAME optimizes both performance and fairness by incorporating a combined loss function. We leverage the Error Distribution Disparity Index (EDDI) to measure fairness across subgroups and propose an RMS-based (root mean square) aggregation method to balance fairness across subgroups, ensuring equitable model outcomes. We evaluate FAME with BEHRT and BioClinicalBERT, combining structured and unstructured EHR data, and demonstrate its effectiveness in terms of performance and fairness compared to other baselines across multiple EHR prediction tasks.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=o6IMf4vkI1}
+}
+
+@inproceedings{mlhc2025_69,
+title={Monte Carlo ExtremalMask: Uncertainty Aware Time Series Model Interpretability For Critical Care Applications},
+author={Shashank Yadav and Vignesh Subbian},
+abstract={Model interpretability for biomedical time-series contexts (e.g., critical care medicine) remains a significant challenge where interactions between pathophysiological signals obscure clinical interpretations. Traditional feature-time attribution methods for time series generate static, deterministic saliency masks, which fail to account for the temporal uncertainty and probabilistic nature of model-inferred feature importance in dynamic physiological systems such as acute organ failure. We address this limitation by proposing a probabilistic framework leveraging Monte Carlo Dropout to quantify model-centric epistemic uncertainty in attribution masks. We capture the stochastic variability through iterative sampling, though the inherent randomness introduces inconsistency in mask outputs across sampling iterations. We implement a dual optimization strategy incorporating entropy minimization and spatiotemporal variance regularization during training to ensure the convergence of attribution masks toward higher informativeness and lower entropy while preserving uncertainty quantification. This approach provides a systematic way to prioritize feature-time pairs by balancing high attribution scores with low uncertainty estimates, enabling end users to discover clinical biomarkers for time-dependent pathophysiological deterioration of patient state. Our work advances the field of healthcare machine learning by formalizing uncertainty-aware interpretability for temporal models while bridging the gap between probabilistic attributions and clinically actionable interpretations for problems in
+critical care.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=tHNBXjamtz}
+}
+
+@inproceedings{mlhc2025_61,
+title={State-of-the-Art Text-Prompted Medical Segmentation Models Struggle to Ground Chest {CT} Findings},
+author={Mohammed Baharoon and Luyang Luo and Michael Moritz and Abhinav Kumar and Sung Eun Kim and Xiaoman Zhang and Miao Zhu and Kent Kleinschmidt and Sri Sai Dinesh Jaliparthi and Sathvik Suryadevara and Rithvik Akula and Mark Marino and Wenhui Lei and Ibrahim Ethem Hamamci and Pranav Rajpurkar},
+abstract={This study presents a comprehensive evaluation of state-of-the-art text-prompted segmentation models, including SAM2, MedSAM2, SegVol, SAT, and BiomedParse, on ReXGrounding, a novel dataset that pairs chest CT findings with corresponding segmentation masks. Our results demonstrate that despite recent advances, current models struggle to accurately segment diverse findings from chest CTs, particularly when dealing with non-focal abnormalities described in natural language reports. While existing models are primarily optimized for fixed categorical labels rather than nuanced clinical descriptions, even fine-tuning these models with free-text descriptions yields limited improvement in segmentation accuracy. These insights highlight that report grounding on 3D medical volumes through segmentation remains an open challenge, necessitating future models that better comprehend complex clinical language and irregular object patterns across volumetric data.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=rgvZI0kCS0}
+}
+
+@inproceedings{mlhc2025_58,
+title={Biomedical Hypothesis Explainability with Graph-Based Context Retrieval},
+author={Ilya Tyagin and Saeideh Valipour and Aliaksandra Sikirzhytskaya and Michael Shtutman and Ilya Safro},
+abstract={We introduce an explainability method for biomedical hypothesis generation systems, built on the the novel Hypothesis Generation Context Refiner framework. Our approach combines semantic graph-based retrieval, and relevant data-restrictive training to simulate real-world discovery constraints. Integrated with large language models (LLMs) via retrieval-augmented generation, the system explains hypotheses in contextual evidence using published scientific literature. We propose a novel feedback loop approach, which iteratively identifies and corrects flawed parts of LLM-generated explanations, refining both the evidence paths and supporting papers. We demonstrate the performance of our method with multiple large language models and evaluate explanation and context retrieval quality through both expert-curated assessment and large-scale automated analysis.\\
+Reproducibility: our code and data are  available at [link will be added upon acceptance]},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=U9wFewO5g4}
+}
+
+@inproceedings{mlhc2025_49,
+title={Classifying Copy Number Variations Using State Space Modeling of Targeted Sequencing Data: A Case Study in Thalassemia},
+author={Austin Talbot and Alex V. Kotlar and Lavanya Rishishwar and Yue Ke},
+abstract={Thalassemia, a blood disorder and one of the most prevalent hereditary genetic disorders worldwide, is often caused by copy number variations (CNVs) in the hemoglobin genes. This disorder has incredible diversity, with a large number of distinct profiles corresponding to alterations of different regions in the genes. Correctly classifying an individual's profile is critical as it impacts treatment, prognosis, and genetic counseling. However, genetic classification is challenging due to the large number of profiles worldwide, and often requires a large number of sequential tests. Targeted next generation sequencing (NGS), which characterizes segments of an individual's genome, has the potential to dramatically reduce the cost of testing and increase accuracy. In this work, we introduce a probabilistic state space model for profiling thalassemia from targeted NGS data, which naturally characterize the spatial ordering of the genes along the chromosome. We then use decision theory to choose the best profile among the different options. Due to our use of Bayesian methodology, we are also able to detect low-quality samples to be excluded from consideration, an important component of clinical screening. We evaluate our model on a dataset of 57 individuals, including both controls and cases with a variety of thalassemia profiles. Our model has a sensitivity of $0.99$ and specificity of $0.93$ for thalassemia detection, and accuracy of $91.5\%$ for characterizing subtypes. Furthermore, the specificity and accuracy rise to $0.96$ and $93.9\%$ when low-quality samples are excluded using our automated quality control method. This approach outperforms alternative methods, particularly in specificity, and is broadly applicable to other disorders.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=a6Aojfkh54}
+}
+
+
+@inproceedings{mlhc2025_43,
+title={Error Profiling of Machine Learning Models: An Exploratory Visualization},
+author={Al Rahrooh and Jeffrey Feng and Alex Bui},
+abstract={While data-driven predictive models are increasingly used in healthcare, their clinical translation remains limited---partly due to challenges in evaluating model performance across design choices. Existing explainability methods often focus on intra-model interpretability but fall short in supporting inter-model comparisons. We present a visualization-based error profiling method that facilitates comparative evaluation by highlighting overlaps and differences in model predictions. Our matrix-based visualization maps which models incorrectly classify which patient subgroups, with color intensity indicating the number of misclassified patients. This approach enables deeper insight into which (sub)populations are consistently (in)correctly classified across models, helping uncover patterns of model (dis)agreement and assess the impact of modeling decisions.  We demonstrate our visualization method in four healthcare use cases: 1) missing data imputation in a longitudinal nutritional dataset; 2) feature set analysis using randomized controlled trial data; 3) end-model technical performance in cardiac morbidity prediction; and 4) data modality comparison using a dual-source lung cancer dataset with longitudinal and radiomic features. To evaluate the visualization, we obtained expert feedback and qualitative assessments of decision-making insights. Survey results---across clinicians, computer scientists, and medical informaticians---indicated that our method provides an interpretable and intuitive way to compare model error distributions by highlighting patterns within correctly and incorrectly classified subpopulations across different models. Our comprehensible error profiling approach represents an initial step toward a systematic framework for improving model assessment in clinical tasks. Through this framework, both model developers and end users can better understand when and where a given model is appropriate for real-world clinical deployment.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=ELk1nFGwgk}
+}
+
+@inproceedings{mlhc2025_39,
+title={Uncertainty-Aware Prediction of Parkinson's Disease Medication Needs: A Two-Stage Conformal Prediction Approach},
+author={Ricardo Diaz-Rincon and Muxuan Liang and Adolfo Ramirez-Zamora and Benjamin Shickel},
+abstract={Parkinson's Disease (PD) medication management presents unique challenges due to heterogeneous disease progression, symptoms,  and treatment response. Neurologists must balance symptom control with optimal dopaminergic medication dosing based on functional disability while minimizing risks of side effects. This balance is crucial as inadequate or abrupt changes can cause levodopa-induced dyskinesia (LID), wearing off, and neuropsychiatric side effects, significantly reducing quality of life. Current approaches rely on trial-and-error decision-making without systematic predictive methods. Despite machine learning advances in medication forecasting, clinical adoption remains limited due to reliance on point predictions that do not account for prediction uncertainty, undermining clinical trust and utility. To facilitate trust, clinicians require not only predictions of future medication needs but also reliable confidence measures. Without quantified uncertainty, medication adjustments risk premature escalation to maximum doses or prolonged periods of inadequate symptom control. To address this challenge, we developed a conformal prediction framework anticipating medication needs up to two years in advance with reliable prediction intervals and statistical guarantees. Our approach addresses zero-inflation in PD inpatient data, where patients maintain stable medication regimens between visits. Using electronic health records data from 631 inpatient admissions at XYZ (2011-2021), our novel two-stage approach identifies patients likely to need medication changes, then predicts required levodopa equivalent daily dose adjustments. Our framework achieved marginal coverage while significantly reducing prediction interval lengths compared to traditional approaches, providing precise predictions for short-term planning and appropriately wider ranges for long-term forecasting, matching the increasing uncertainty in extended projections. By quantifying uncertainty in medication needs, our approach enables evidence-based decisions about levodopa dosing and medication adjustments, potentially optimizing symptom control while minimizing side effects and improving patients' quality of life.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=qV7mwDK4Gk}
+}
+
+@inproceedings{mlhc2025_34,
+title={ConTextual: Improving Clinical Text Summarization in {LLM}s with Context-preserving Token Filtering and Knowledge Graphs},
+author={Fahmida Liza Piya and Rahmatollah Beheshti},
+abstract={Unstructured clinical data can serve as a unique and rich source of information that can meaningfully inform clinical practice. Extracting the most pertinent context from such data is critical for exploiting its true potential toward optimal and timely decision-making in patient care. While prior research has explored various methods for clinical text summarization, most prior studies either process all input tokens uniformly or rely on heuristic-based filters, which can overlook nuanced clinical cues and fail to prioritize information critical for decision-making. In this study, we propose Contextual, a novel framework that integrates a Context-Preserving Token Filtering method with a Domain-Specific Knowledge Graph (KG) for contextual augmentation. By preserving context-specific important tokens and enriching them with structured knowledge, ConTextual improves both linguistic coherence and clinical fidelity. Our extensive empirical evaluations on two public benchmark datasets demonstrate that ConTextual consistently outperforms other baselines. Our proposed approach highlights the complementary role of token-level filtering and structured retrieval in enhancing both linguistic and clinical integrity, as well as offering a scalable solution for improving precision in clinical text generation.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=zsXfb6Ko8c}
+}
+
+
+@inproceedings{mlhc2025_32,
+title={Pheno{RAG}: Retrieval-Augmented Generation for Efficient Zero-Shot Phenotype Identification in Clinical Reports},
+author={Marc Berndt and Andrea Agostini and Beatrice Stocker and Maria Padrutt and Silvio Daniel Brugger and D Sean Froese and Daphn\'e Chopard and Julia E Vogt},
+abstract={Accurate extraction of phenotypic information from clinical narratives is essential in diagnostic medicine, yet mapping free-text reports to structured Human Phenotype Ontology (HPO) terms remains challenging. While encoder-only transformer models and small decoder-only generative models are attractive for clinical deployment due to their efficiency and low resource requirements, the former often fail to capture the rich context of clinical texts, and the latter struggle to process lengthy reports effectively. In contrast, larger language models excel at contextual understanding but are impractical for clinical use due to their size, propensity to hallucinate, and privacy concerns associated with non-local inference. 
+To overcome these challenges, we introduce PhenoRAG, a novel retrieval-augmented generation framework that leverages a synthetic database of contextually enriched sentences to augment a lightweight decoder-only model for accurate zero-shot phenotype identification. We demonstrate the capacity of PhenoRAG to capture nuanced contextual clues by 1) evaluating its ability to perform two clinically relevant tasks---guide rare disease diagnosis and facilitate urinary tract infection detection---and 2) validating its performance on a synthetic dataset designed to mimic the challenges of real clinical narratives. Experimental results demonstrate that our lightweight PhenoRAG framework achieves a higher F1-score than both encoder-only transformers and standalone small language models, driven primarily by its high recall. These findings underscore the potential of PhenoRAG as a ready-to-use clinical tool for phenotype identification.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=sZN2nuaqjk}
+}
+
+
+@inproceedings{mlhc2025_31,
+title={Towards Scalable Newborn Screening: Automated General Movement Assessment in Uncontrolled Settings},
+author={Daphn\'e Chopard and Sonia Laguna and Kieran Chin-Cheong and Annika Dietz and Anna Badura and Sven Wellmann and Julia E Vogt},
+abstract={General movements (GMs) are spontaneous, coordinated body movements in infants that offer valuable insights into the developing nervous system. Assessed through the Prechtl GM Assessment (GMA), GMs are reliable predictors for neurodevelopmental disorders. However, GMA requires specifically trained clinicians, who are limited in number. To scale up newborn screening, there is a need for an algorithm that can automatically classify GMs from infant video recordings. This data poses challenges, including variability in recording length, device type, and setting, with each video coarsely annotated for overall movement quality. In this work, we introduce a tool for extracting features from these recordings and explore various machine learning techniques for automated GM classification.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=bWIsXMHGCY}
+}
+
+@inproceedings{mlhc2025_29,
+title={{INSIGHT}: Explainable Weakly-Supervised Medical Image Analysis},
+author={Wenbo Zhang and Junyu Chen and Christopher Kanan},
+abstract={Due to their large sizes, volumetric scans and whole-slide pathology images (WSIs) are often processed by extracting embeddings from local regions and then an aggregator makes predictions from this set. However, current methods require post-hoc visualization techniques (e.g., Grad-CAM)  and often fail to localize small yet clinically crucial details. To address these limitations, we introduce INSIGHT, a novel weakly-supervised aggregator that integrates heatmap generation as an inductive bias. Starting from pre-trained feature maps, INSIGHT employs a detection module with small convolutional kernels to capture fine details and a context module with a broader receptive field to suppress local false positives. The resulting internal heatmap highlights diagnostically relevant regions. On CT and WSI benchmarks, INSIGHT achieves state-of-the-art classification results and high weakly-labeled semantic segmentation performance.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=9qmbnV1qYe}
+}
+
+@inproceedings{mlhc2025_26,
+title={Enhancing Adaptive Behavioral Interventions with {LLM} Inference from Participant Described States},
+author={Karine Karine and Benjamin M. Marlin},
+abstract={The use of reinforcement learning (RL) methods to support health behavior change via personalized and just-in-time adaptive interventions is of significant interest to health and behavioral science researchers focused on problems such as smoking cessation support and physical activity promotion. However, RL methods are often applied to these domains using a small collection of context variables to mitigate the significant data scarcity issues that arise from practical limitations on the design of adaptive intervention trials.
+In this paper, we explore an approach to significantly expanding the state space of an adaptive intervention without impacting data efficiency. The proposed approach enables intervention participants to provide natural language descriptions of aspects of their current state. It then leverages inference with pre-trained large language models (LLMs) to better align the policy of a base RL method with these state descriptions. To evaluate our method, we develop a novel physical activity intervention simulation environment that generates text-based state descriptions conditioned on latent state variables using an auxiliary LLM.
+We show that this approach has the potential to significantly improve the performance of online policy learning methods.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=tUQbBivoIV}
+}
+
+@inproceedings{mlhc2025_16,
+title={Stage-Aware Event-Based Modeling ({SA}-{EBM}) for Disease Progression},
+author={Hongtao Hao and Vivek Prabhakaran and Veena A Nair and Nagesh Adluru and Joseph Austerweil},
+abstract={As diseases progress, the number of cognitive and biological biomarkers they impact increases. By formulating probabilistic models with this basic assumption, Event-Based Models (EBMs) enable researchers to discover the progression of a disease that makes earlier diagnosis and effective clinical interventions possible. We build on prior EBMs with two major improvements: (1) dynamic estimation of healthy and pathological biomarker distributions, and (2) explicit modeling of the distribution of disease stages. We tested existing approaches and our novel approach on a benchmark of 9,000 synthetic datasets, inspired from real-world data. We found that our stage-aware EBM (SA-EBM) significantly outperforms prior methods, such as Gaussian Mixture Model (GMM) EBM, Kernel Density Estimation EBM and Discriminative EBM, on ordering and staging tasks.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=fELXmDMhOj}
+}
+
+@inproceedings{mlhc2025_13,
+title={Predicting the Predictable in the Psychiatric High Risk},
+author={Eric Strobl},
+abstract={Most investigators in precision psychiatry force models to predict clinically meaningful but ultimately predefined outcomes in a high-risk population. We instead advocate for an alternative approach: let the data reveal which symptoms are predictable with high accuracy and then assess whether those predictable symptoms warrant early intervention. We correspondingly introduce the Sparse Canonical Outcome REgression (SCORE) algorithm, which combines items from clinical rating scales into severity scores that maximize predictability across time. Our findings show that this simple shift in perspective significantly boosts prognostic accuracy, uncovering predictable symptom profiles such as social difficulties and stress-paranoia from those at clinical high risk for psychosis, and social passivity from infants at genetic high risk for autism. The predictable scores differ markedly from conventional clinical metrics and offer clinicians memorable, actionable insights even when full diagnostic criteria are unmet. An R implementation is available at https://anonymous.4open.science/r/SCORE-B06C.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=70YtZwArc7}
+}
+
+@inproceedings{mlhc2025_11,
+title={{ECG}-Byte: A Tokenizer for End-to-End Generative Electrocardiogram Language Modeling},
+author={William Han and Chaojing Duan and Michael Rosenberg and Emerson Liu and Ding Zhao},
+abstract={Large Language Models (LLMs) have demonstrated exceptional versatility across domains, including applications to electrocardiograms (ECGs). A growing body of work focuses on generating text from multi-channeled ECG signals and corresponding textual prompts. Existing approaches often involve a two-stage process: pretraining an ECG-specific encoder with a self-supervised learning (SSL) objective, followed by finetuning an LLM for natural language generation (NLG) using encoder-derived features. However, these methods face two key limitations: inefficiency due to multi-stage training and challenges in interpreting encoder-generated features.
+To overcome these issues, we propose ECG-Byte, an adapted byte pair encoding (BPE) tokenizer pipeline for autoregressive language modeling of ECGs. ECG-Byte compresses and encodes ECG signals into tokens, enabling direct end-to-end LLM training by combining ECG and text tokens. This approach enhances interpretability, as ECG tokens can be directly mapped back to the original signals. Leveraging ECG-Byte, we achieve competitive NLG performance while training 3 times faster and using just 48% of the data required by traditional two-stage methods.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=2A7NPhRwYU}
+}
+
+@inproceedings{mlhc2025_6,
+title={TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction},
+author={Sihang Zeng and Lucas Jing Liu and Jun Wen and Meliha Yetisgen and Ruth Etzioni and Gang Luo},
+abstract={Trustworthy survival prediction is essential for clinical decision making. Longitudinal electronic health records (EHRs) provide a uniquely powerful opportunity for the prediction. However, it is challenging to accurately model the continuous clinical progression of patients underlying the irregularly sampled clinical features and to transparently link the progression to survival outcomes. To address these challenges, we develop TrajSurv, a model that learns continuous latent trajectories from longitudinal EHR data for trustworthy survival prediction. TrajSurv employs a neural controlled differential equation (NCDE) to extract continuous-time latent states from the irregularly sampled data, forming continuous latent trajectories. To ensure the latent trajectories reflect the clinical progression, TrajSurv aligns the latent state space with patient state space through a time-aware contrastive learning approach. To transparently link clinical progression to the survival outcome, TrajSurv uses latent trajectories in a two-step divide-and-conquer interpretation process. First, it explains how the changes in clinical features translate into the latent trajectory's evolution using a learned vector field. Second, it clusters these latent trajectories to identify key clinical progression patterns associated with different survival outcomes. Evaluations on two real-world medical datasets, MIMIC-III and eICU, show TrajSurv's competitive accuracy and superior transparency over existing deep learning methods.},
+booktitle={Machine Learning for Healthcare 2025},
+year={2025},
+url={https://openreview.net/forum?id=AJXPXw8XaT}
+}
+
