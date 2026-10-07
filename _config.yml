@@ -4,7 +4,7 @@ volume: '298'
 shortname: MLHC
 conference_number: '10'
 year: '2025'
-start: &1 2025-08-15
+start: 2025-08-15
 end: 2025-08-16
 published: 2025-10-07
 url: https://proceedings.mlr.press
@@ -82,7 +82,7 @@ conference:
   url:
   location: Mayo Clinic, Rochester, MN, USA
   dates:
-  - *1
+  - 2025-08-15
   - 2025-08-16
 analytics:
   google:
